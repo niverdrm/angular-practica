@@ -1,0 +1,35 @@
+<div class="container">
+  <div class="row">
+    <h1 class="col-12 text-center">Listar</h1>
+    <div class="col-12">
+      <table class="table">
+        <thead class="thead-dark">
+          <tr>
+            <th scope="col">#</th>
+            <th scope="col">Nombre</th>
+            <th scope="col">apellido</th>
+            <th scope="col">cedula</th>
+            <th scope="col">acciones</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr *ngFor="let empleado of empleados; let i = index">
+            <th scope="row">{{ i + 1 }}</th>
+            <td>{{ empleado.primerNombre }}</td>
+            <td>{{ empleado.primerApellido }}</td>
+            <td>{{ empleado.cedula }}</td>
+            <td>
+              <ul class="action">
+                <i (click)="emitirEmpleado(empleado)" class="fas fa-edit"></i>
+                <i
+                  (click)="eliminarEmpleado(empleado.id)"
+                  class="far fa-trash-alt"
+                ></i>
+              </ul>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+</div>

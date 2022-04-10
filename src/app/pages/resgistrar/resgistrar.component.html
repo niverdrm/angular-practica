@@ -1,0 +1,60 @@
+<div class="container">
+  <div class="row">
+    <h1 class="col-12 text-center">{{ titulo }}</h1>
+    <div class="col-12">
+      <form [formGroup]="formEmpleado" (submit)="validarEditarCrear()">
+        <div class="form col-12">
+          <div class="col-6">
+            <div class="form-group">
+              <label for="exampleInputEmail1">Primer Nombre</label>
+              <input
+                type="text"
+                class="form-control"
+                id="primerNombre"
+                aria-describedby="emailHelp"
+                placeholder="nombre"
+                formControlName="primerNombre"
+              />
+            </div>
+            <div class="form-group">
+              <label for="exampleInputPassword1">Primer Apellido</label>
+              <input
+                type="text"
+                class="form-control"
+                id="primerApellido"
+                placeholder="apellido"
+                formControlName="primerApellido"
+              />
+            </div>
+          </div>
+          <div class="col-6">
+            <div class="form-group">
+              <label for="exampleInputEmail1">Pais</label>
+              <input
+                type="text"
+                class="form-control"
+                id="pais"
+                aria-describedby="emailHelp"
+                placeholder="Ingrese el Pais"
+                formControlName="pais"
+              />
+            </div>
+            <div class="form-group">
+              <label for="exampleInputPassword1">Cedula</label>
+              <input
+                type="number"
+                class="form-control"
+                id="cedula"
+                placeholder="Cedula"
+                formControlName="cedula"
+              />
+            </div>
+          </div>
+        </div>
+        <div class="button">
+          <button type="submit" class="btn btn-primary">{{ titulo }}</button>
+        </div>
+      </form>
+    </div>
+  </div>
+</div>
